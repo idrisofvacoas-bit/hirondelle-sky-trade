@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -23,16 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="relative">
-              <svg
-                viewBox="0 0 40 40"
-                className="w-10 h-10 text-primary"
-                fill="currentColor"
-              >
-                {/* Swallow bird side profile in flight */}
-                <path d="M2 20 C4 18 8 17 12 18 C14 14 18 12 22 14 L24 12 C26 14 26 16 24 18 C28 17 34 16 38 18 C34 19 28 19 24 20 C26 22 26 26 24 30 L22 26 C20 28 16 28 14 26 C12 28 8 30 4 28 C8 26 10 24 12 22 C8 22 4 21 2 20 Z M22 17 C21 16 21 15 22 15 C23 15 23 16 22 17 Z" />
-              </svg>
-            </div>
+            <img src={logo} alt="Hirondelle Trading Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
               <span className="text-lg font-semibold text-foreground leading-tight">
                 Hirondelle
