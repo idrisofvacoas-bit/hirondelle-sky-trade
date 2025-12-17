@@ -63,8 +63,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Trade Smarter.{" "}
-            <span className="text-gradient">Deliver Better.</span>{" "}
+            Trade Smarter.<br />
+            <span className="text-gradient">Deliver Better.</span><br />
             Fly Further.
           </motion.h1>
 
