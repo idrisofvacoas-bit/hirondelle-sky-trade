@@ -78,7 +78,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center">
+                <div className="aspect-square rounded-3xl bg-white shadow-lg flex items-center justify-center">
                   <img src={logo} alt="Hirondelle Trading Logo" className="w-48 h-48 object-contain" />
                 </div>
                 {/* Floating decorations */}
