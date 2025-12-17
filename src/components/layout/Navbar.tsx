@@ -23,13 +23,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Hirondelle Trading Logo" className="w-10 h-10 object-contain mix-blend-multiply" />
+          <Link to="/" className="flex items-center gap-2 bg-white rounded-lg px-2 py-1.5 shadow-sm">
+            <img src={logo} alt="Hirondelle Trading Logo" className="w-9 h-9 object-contain" />
             <div className="flex flex-col">
-              <span className="text-lg font-semibold text-foreground leading-tight">
+              <span className="text-lg font-semibold text-slate-800 leading-tight">
                 Hirondelle
               </span>
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span className="text-xs text-slate-500 leading-tight">
                 Trading Limited
               </span>
             </div>
