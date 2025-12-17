@@ -29,8 +29,8 @@ const Navbar = () => {
                 className="w-10 h-10 text-primary"
                 fill="currentColor"
               >
-                {/* Swallow bird silhouette in flight */}
-                <path d="M4 18 C8 16 14 17 18 19 L20 14 L22 19 C26 17 32 16 36 18 C32 19 28 20 24 20 L27 28 C24 24 22 22 20 22 C18 22 16 24 13 28 L16 20 C12 20 8 19 4 18 Z" />
+                {/* Swallow bird side profile in flight */}
+                <path d="M2 20 C4 18 8 17 12 18 C14 14 18 12 22 14 L24 12 C26 14 26 16 24 18 C28 17 34 16 38 18 C34 19 28 19 24 20 C26 22 26 26 24 30 L22 26 C20 28 16 28 14 26 C12 28 8 30 4 28 C8 26 10 24 12 22 C8 22 4 21 2 20 Z M22 17 C21 16 21 15 22 15 C23 15 23 16 22 17 Z" />
               </svg>
             </div>
             <div className="flex flex-col">
