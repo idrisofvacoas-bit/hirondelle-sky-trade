@@ -149,7 +149,7 @@ const Sustainability = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="aspect-video rounded-2xl shadow-lg overflow-hidden">
+                <div className="aspect-[4/5] rounded-2xl shadow-lg overflow-hidden">
                   <img src={sustainableFuture} alt="Sustainable future" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
