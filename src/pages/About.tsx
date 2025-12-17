@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Award, Globe, Users, TrendingUp } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const stats = [
   { icon: Award, value: "18+", label: "Years Experience" },
@@ -78,14 +79,7 @@ const About = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center">
-                  <svg
-                    viewBox="0 0 200 200"
-                    className="w-48 h-48 text-primary"
-                    fill="currentColor"
-                  >
-                    <path d="M100 20 C130 50, 180 75, 180 100 C180 125, 130 150, 100 180 C70 150, 20 125, 20 100 C20 75, 70 50, 100 20 Z M70 90 C85 75, 100 70, 115 75 L130 60 C110 45, 90 45, 70 60 Z" />
-                    <path d="M100 35 C125 60, 165 80, 165 100 C165 120, 125 140, 100 165 C75 140, 35 120, 35 100 C35 80, 75 60, 100 35 Z" opacity="0.3" />
-                  </svg>
+                  <img src={logo} alt="Hirondelle Trading Logo" className="w-48 h-48 object-contain" />
                 </div>
                 {/* Floating decorations */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl animate-float" />
