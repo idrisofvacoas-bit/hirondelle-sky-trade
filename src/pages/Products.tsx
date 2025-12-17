@@ -13,7 +13,7 @@ const products = [
     id: 1,
     name: "Organic Cotton Textiles",
     category: "Organic",
-    price: "From £15/unit",
+    price: "",
     image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=400&fit=crop",
     sustainable: true,
     description: "Premium organic cotton sourced from certified suppliers.",
