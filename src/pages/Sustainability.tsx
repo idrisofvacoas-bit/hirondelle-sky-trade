@@ -150,7 +150,7 @@ const Sustainability = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className="aspect-[4/5] rounded-2xl shadow-lg overflow-hidden">
-                  <img src={sustainableFuture} alt="Sustainable future" className="w-full h-full object-cover" />
+                  <img src={sustainableFuture} alt="Sustainable future" className="w-full h-full object-contain bg-[#1a3a2a]" />
                 </div>
               </motion.div>
 
