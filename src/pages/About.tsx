@@ -78,8 +78,14 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="aspect-square rounded-3xl bg-white shadow-lg flex items-center justify-center">
-                  <img src={logo} alt="Hirondelle Trading Logo" className="w-48 h-48 object-contain" />
+                <div className="aspect-square rounded-3xl bg-gradient-to-b from-primary/20 via-primary/10 to-white shadow-lg flex items-center justify-center relative overflow-hidden">
+                  {/* Cloud decorations */}
+                  <div className="absolute top-4 left-4 w-16 h-8 bg-white/80 rounded-full blur-sm" />
+                  <div className="absolute top-6 left-8 w-12 h-6 bg-white/70 rounded-full blur-sm" />
+                  <div className="absolute top-8 right-6 w-20 h-10 bg-white/80 rounded-full blur-sm" />
+                  <div className="absolute top-10 right-10 w-14 h-7 bg-white/70 rounded-full blur-sm" />
+                  <div className="absolute top-16 left-1/4 w-10 h-5 bg-white/60 rounded-full blur-sm" />
+                  <img src={logo} alt="Hirondelle Trading Logo" className="w-48 h-48 object-contain relative z-10" />
                 </div>
                 {/* Floating decorations */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl animate-float" />
