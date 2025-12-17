@@ -26,19 +26,11 @@ const Navbar = () => {
             <div className="relative">
               <svg
                 viewBox="0 0 40 40"
-                className="w-10 h-10"
+                className="w-10 h-10 text-primary"
                 fill="currentColor"
               >
-                {/* Cloud behind */}
-                <path 
-                  d="M8 24 Q6 24 6 22 Q6 20 8 20 Q8 18 10 18 Q12 16 15 16 Q18 14 22 14 Q26 14 28 16 Q30 16 32 18 Q34 18 34 20 Q36 20 36 22 Q36 24 34 24 Z" 
-                  className="text-primary/20"
-                />
-                {/* Swallow bird silhouette */}
-                <path 
-                  d="M8 22 Q12 20 16 21 L18 18 Q20 16 22 18 L24 21 Q28 20 32 22 Q28 21 24 22 L26 26 Q24 24 22 22 Q20 24 18 22 Q16 24 14 26 L16 22 Q12 21 8 22 Z M20 20 Q19 19 20 18 Q21 19 20 20 Z" 
-                  className="text-primary"
-                />
+                {/* Swallow bird silhouette in flight */}
+                <path d="M4 18 C8 16 14 17 18 19 L20 14 L22 19 C26 17 32 16 36 18 C32 19 28 20 24 20 L27 28 C24 24 22 22 20 22 C18 22 16 24 13 28 L16 20 C12 20 8 19 4 18 Z" />
               </svg>
             </div>
             <div className="flex flex-col">
