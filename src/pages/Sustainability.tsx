@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import sustainableFuture from "@/assets/sustainable-future.jpg";
 import {
   Leaf,
   Recycle,
@@ -148,13 +149,8 @@ const Sustainability = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center relative overflow-hidden">
-                  <TreeDeciduous className="w-32 h-32 text-primary/30 absolute" />
-                  <Factory className="w-24 h-24 text-primary/20 absolute bottom-8 right-8" />
-                  <div className="relative z-10 text-center">
-                    <Leaf className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <p className="text-sm text-primary font-medium">Sustainable Future</p>
-                  </div>
+                <div className="aspect-video rounded-2xl shadow-lg overflow-hidden">
+                  <img src={sustainableFuture} alt="Sustainable future" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
 
