@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Hirondelle Trading Logo" className="w-10 h-10 object-contain" />
+            <img src={logo} alt="Hirondelle Trading Logo" className="w-10 h-10 object-contain mix-blend-multiply" />
             <div className="flex flex-col">
               <span className="text-lg font-semibold text-foreground leading-tight">
                 Hirondelle
