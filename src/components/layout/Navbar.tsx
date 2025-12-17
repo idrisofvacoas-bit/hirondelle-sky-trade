@@ -1,0 +1,117 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Products", path: "/products" },
+  { name: "Services", path: "/services" },
+  { name: "Sustainability", path: "/sustainability" },
+  { name: "Contact", path: "/contact" },
+];
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <div className="relative">
+              <svg
+                viewBox="0 0 40 40"
+                className="w-10 h-10 text-primary"
+                fill="currentColor"
+              >
+                <path d="M20 5 C25 10, 35 15, 35 20 C35 25, 25 30, 20 35 C15 30, 5 25, 5 20 C5 15, 15 10, 20 5 Z M15 18 C17 16, 20 15, 23 16 L25 14 C22 12, 18 12, 15 14 Z" />
+                <path d="M20 8 C23 12, 30 16, 30 20 C30 24, 23 28, 20 32 C17 28, 10 24, 10 20 C10 16, 17 12, 20 8 Z" opacity="0.3" />
+              </svg>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg font-semibold text-foreground leading-tight">
+                Hirondelle
+              </span>
+              <span className="text-xs text-muted-foreground leading-tight">
+                Trading Limited
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  location.pathname === link.path
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Button variant="hero" size="default" asChild>
+              <Link to="/products">Shop Now</Link>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-foreground"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-background border-b border-border"
+          >
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                    location.pathname === link.path
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Button variant="hero" className="mt-2" asChild>
+                <Link to="/products" onClick={() => setIsOpen(false)}>
+                  Shop Now
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default Navbar;
