@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,13 +10,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <svg
-                viewBox="0 0 40 40"
-                className="w-10 h-10 text-primary-light"
-                fill="currentColor"
-              >
-                <path d="M20 5 C25 10, 35 15, 35 20 C35 25, 25 30, 20 35 C15 30, 5 25, 5 20 C5 15, 15 10, 20 5 Z M15 18 C17 16, 20 15, 23 16 L25 14 C22 12, 18 12, 15 14 Z" />
-              </svg>
+              <div className="bg-white rounded-lg p-1">
+                <img src={logo} alt="Hirondelle Logo" className="w-10 h-10 object-contain" />
+              </div>
               <div>
                 <span className="text-lg font-semibold">Hirondelle</span>
                 <p className="text-xs text-background/60">Trading Limited</p>
