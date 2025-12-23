@@ -17,7 +17,7 @@ const stats = [{
   label: "Happy Clients"
 }, {
   icon: TrendingUp,
-  value: "2018",
+  value: "2023",
   label: "Founded"
 }];
 const About = () => {
