@@ -14,7 +14,7 @@ const stats = [{
 }, {
   icon: Users,
   value: "500+",
-  label: "Happy Clients"
+  label: "Organisations"
 }, {
   icon: TrendingUp,
   value: "2018",
