@@ -18,7 +18,7 @@ const stats = [{
 }, {
   icon: TrendingUp,
   value: "2023",
-  label: "Founded"
+  label: "Ideology"
 }];
 const About = () => {
   return <div className="min-h-screen bg-background">
