@@ -8,18 +8,32 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-const contactInfo = [
+// Obfuscate contact details to prevent bot scraping
+const decodeContact = (encoded: string): string => {
+  return encoded
+    .split('')
+    .map((char) => String.fromCharCode(char.charCodeAt(0) - 1))
+    .join('');
+};
+
+// Encoded values (each character shifted by +1)
+const ENCODED_EMAIL = "jogpAiusbejoh/dpn"; // info@htrading.com
+const ENCODED_PHONE_DISPLAY = ",55!)1*!8987!19:7!14"; // +44 (0) 7876 0896 03
+const ENCODED_PHONE_HREF = "ufm;,558987189714"; // tel:+447876089603
+const ENCODED_MAILTO = "nbjmup;jogpAiusbejoh/dpn"; // mailto:info@htrading.com
+
+const getContactInfo = () => [
   {
     icon: Mail,
     label: "Email",
-    value: "info@htrading.com",
-    href: "mailto:info@htrading.com",
+    value: decodeContact(ENCODED_EMAIL),
+    href: decodeContact(ENCODED_MAILTO),
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 (0) 7876 0896 03",
-    href: "tel:+447876089603",
+    value: decodeContact(ENCODED_PHONE_DISPLAY),
+    href: decodeContact(ENCODED_PHONE_HREF),
   },
   {
     icon: MapPin,
@@ -124,7 +138,7 @@ const Contact = () => {
                 </h2>
 
                 <div className="space-y-6 mb-10">
-                  {contactInfo.map((item) => (
+                  {getContactInfo().map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <item.icon className="w-5 h-5 text-primary" />
