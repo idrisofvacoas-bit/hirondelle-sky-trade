@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-foreground text-background">
+  return <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -15,7 +13,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-lg font-semibold">Hirondelle</span>
-                <p className="text-xs text-background/60">Trading Limited</p>
+                <p className="text-xs text-background/60">Trading Ltd</p>
               </div>
             </div>
             <p className="text-background/70 text-sm">
@@ -30,21 +28,23 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {[
-                { name: "About Us", path: "/about" },
-                { name: "Products", path: "/products" },
-                { name: "Services", path: "/services" },
-                { name: "Sustainability", path: "/sustainability" },
-              ].map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-background/70 hover:text-primary-light transition-colors text-sm"
-                  >
+              {[{
+              name: "About Us",
+              path: "/about"
+            }, {
+              name: "Products",
+              path: "/products"
+            }, {
+              name: "Services",
+              path: "/services"
+            }, {
+              name: "Sustainability",
+              path: "/sustainability"
+            }].map(link => <li key={link.path}>
+                  <Link to={link.path} className="text-background/70 hover:text-primary-light transition-colors text-sm">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-background/70">
                 <Phone size={16} className="text-primary-light" />
-                +44 (0) 123 456 7890
+                +44 (0) 7876089   
               </li>
               <li className="flex items-start gap-3 text-sm text-background/70">
                 <MapPin size={16} className="text-primary-light mt-0.5" />
@@ -93,8 +93,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
