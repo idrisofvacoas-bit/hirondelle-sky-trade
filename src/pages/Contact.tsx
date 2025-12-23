@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@hirondelletrading.com",
-    href: "mailto:info@hirondelletrading.com",
+    value: "info@htrading.com",
+    href: "mailto:info@htrading.com",
   },
   {
     icon: Phone,
