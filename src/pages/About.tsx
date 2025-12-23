@@ -43,7 +43,7 @@ const About = () => {
                 About Hirondelle Trading Ltd
               </h1>
               <p className="text-lg text-muted-foreground">
-                Connecting Products, People, and Purpose since 2018.
+                Connecting Products, People, and Purpose since 2023.
               </p>
             </motion.div>
           </div>
