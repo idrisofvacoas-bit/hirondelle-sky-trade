@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Award, Globe, Users, TrendingUp, RotateCcw } from "lucide-react";
+import { Award, Globe, Users, TrendingUp, RotateCcw, Package } from "lucide-react";
 import hirondelleFlying from "@/assets/hirondelle-flying.jpg";
 const stats = [{
   icon: Award,
@@ -13,8 +13,8 @@ const stats = [{
   label: "Continents Served"
 }, {
   icon: Users,
-  value: "15+",
-  label: "Organisations"
+  value: "500+",
+  label: "Happy Clients"
 }, {
   icon: TrendingUp,
   value: "2018",
