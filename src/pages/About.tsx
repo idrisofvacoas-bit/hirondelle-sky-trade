@@ -40,7 +40,7 @@ const About = () => {
                 About Us
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                About Hirondelle Trading Limited
+                About Hirondelle Trading Ltd
               </h1>
               <p className="text-lg text-muted-foreground">
                 Connecting Products, People, and Purpose since 2018.
