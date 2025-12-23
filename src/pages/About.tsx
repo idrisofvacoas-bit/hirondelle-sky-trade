@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Award, Globe, Users, TrendingUp } from "lucide-react";
+import { Award, Globe, Users, TrendingUp, RotateCcw } from "lucide-react";
 import hirondelleFlying from "@/assets/hirondelle-flying.jpg";
 const stats = [{
   icon: Award,
@@ -17,8 +17,8 @@ const stats = [{
   label: "Happy Clients"
 }, {
   icon: TrendingUp,
-  value: "2023",
-  label: "Ideology"
+  value: "2018",
+  label: "Founded"
 }];
 const About = () => {
   return <div className="min-h-screen bg-background">
@@ -40,10 +40,10 @@ const About = () => {
                 About Us
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                About Hirondelle Trading Ltd
+                About Hirondelle Trading Limited
               </h1>
               <p className="text-lg text-muted-foreground">
-                Connecting Products, People, and Purpose since 2023.
+                Connecting Products, People, and Purpose since 2018.
               </p>
             </motion.div>
           </div>
