@@ -76,11 +76,7 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }}>
-            Hirondelle Trading Limited is a B2C-hybrid e-commerce platform delivering 
-            wholesale and bespoke products with reliability, speed, and a commitment 
-            to low-emission, sustainable trade.
-          </motion.p>
+        }}>Hirondelle Trading Ltd is a B2C-hybrid e-commerce platform delivering wholesale and bespoke products with reliability, speed, and a commitment to low-emission, sustainable trade.</motion.p>
 
           {/* CTA Buttons */}
           <motion.div className="flex flex-col sm:flex-row gap-4 mb-12" initial={{
@@ -125,7 +121,7 @@ const HeroSection = () => {
               <div className="p-2 rounded-lg bg-primary/10">
                 <Shield size={18} className="text-primary" />
               </div>
-              <span>Trusted Since 2024</span>
+              <span>Connecting Since 2023</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="p-2 rounded-lg bg-primary/10">
