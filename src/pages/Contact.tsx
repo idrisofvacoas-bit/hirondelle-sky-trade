@@ -111,15 +111,15 @@ const Contact = () => {
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="max-w-xl mx-auto">
               {/* Contact Info */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl font-bold text-foreground mb-8">
+                <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
                   Get in Touch
                 </h2>
 
@@ -164,135 +164,6 @@ const Contact = () => {
                       Bespoke Order
                     </Button>
                   </div>
-                </div>
-              </motion.div>
-
-              {/* Contact Form */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="bg-card rounded-2xl p-8 shadow-card">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">
-                    Send Us a Message
-                  </h2>
-
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Your Name *
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="John Doe"
-                          className="h-12"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Email Address *
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="john@example.com"
-                          className="h-12"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div>
-                        <label
-                          htmlFor="company"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Company Name
-                        </label>
-                        <Input
-                          id="company"
-                          name="company"
-                          type="text"
-                          value={formData.company}
-                          onChange={handleChange}
-                          placeholder="Your Company"
-                          className="h-12"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="subject"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Subject *
-                        </label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          type="text"
-                          required
-                          value={formData.subject}
-                          onChange={handleChange}
-                          placeholder="How can we help?"
-                          className="h-12"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Message *
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell us about your requirements..."
-                        rows={5}
-                        className="resize-none"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      variant="hero"
-                      size="lg"
-                      className="w-full"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        "Sending..."
-                      ) : (
-                        <>
-                          Send Message
-                          <Send size={18} />
-                        </>
-                      )}
-                    </Button>
-                  </form>
                 </div>
               </motion.div>
             </div>
