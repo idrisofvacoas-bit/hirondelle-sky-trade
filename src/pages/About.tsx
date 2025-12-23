@@ -13,7 +13,7 @@ const stats = [{
   label: "Continents Served"
 }, {
   icon: Users,
-  value: "500+",
+  value: "15+",
   label: "Organisations"
 }, {
   icon: TrendingUp,
